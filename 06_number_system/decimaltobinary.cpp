@@ -7,22 +7,16 @@ int main() {
     cout << "Enter a decimal number: ";
     cin >> n;
 
-    vector<int> binary; // To store binary digits
+    int ans=0;
+    int power=1;
 
-    if (n == 0) {
-        binary.push_back(0);
+    while (n>0){
+        int paritydigits = n%2;
+        ans += paritydigits*power;
+        power*=10;
+        n/=2;
     }
-
-    while (n > 0) {
-        binary.push_back(n % 2); // Store remainder
-        n /= 2; // Divide by 2
-    }
-
-    cout << "Number in binary number system: ";
-    for (int i = binary.size() - 1; i >= 0; i--) {
-        cout << binary[i];
-    }
-    cout << endl;
+    cout<<"The numbe in binary number system is " <<ans<<endl;
 
     return 0;
 }

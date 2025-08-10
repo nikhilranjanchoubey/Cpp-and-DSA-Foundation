@@ -1,5 +1,4 @@
 // Calculate the sum of all the elements in the give array.
-
 #include<iostream>
 using namespace std;
 

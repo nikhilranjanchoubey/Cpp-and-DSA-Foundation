@@ -1,1 +1,1 @@
-cout<<vowels[];
+#include<iostream>

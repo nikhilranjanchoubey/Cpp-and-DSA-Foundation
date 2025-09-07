@@ -2,7 +2,7 @@
 #include<iostream>
 using namespace std;
 
-int main(){
+int main() {
 
     int array[]={3,4,6,7,1};
     int targetsum=7;

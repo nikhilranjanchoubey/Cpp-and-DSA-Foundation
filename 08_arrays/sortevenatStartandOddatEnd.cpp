@@ -1,5 +1,5 @@
 // Given an array of integers 'a',
-// Move all the even integers at the beginning of the array followed by all the odd integers.
+// Move all the Even integers at the beginning of the array followed by all the Odd integers.
 // The relative order of odd or even integers does not matter.
 // Return any array that satisfies the condition.
 

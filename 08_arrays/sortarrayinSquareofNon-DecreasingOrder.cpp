@@ -3,31 +3,29 @@
 
 #include<iostream>
 #include<vector>
+#include<cmath> // for abs()
 using namespace std;
 
-// Function to return sorted squares of a sorted array
-vector<int> sortedSquares(const vector<int> &a) {
-    int n = a.size();
-    vector<int> result(n); // Output array
-    int left = 0;
-    int right = n - 1;
-    int index = n - 1; // Start filling from the end
+// Function to compute sorted squares of a sorted array
+vector<int> sortedSquaredArray(const vector<int> &v) {
+    vector<int> ans(v.size());
 
-    // Compare absolute values from both ends
-    while (left <= right) {
-        int leftSquare = a[left] * a[left];
-        int rightSquare = a[right] * a[right];
+    int left_ptr = 0;
+    int right_ptr = v.size() - 1;
+    int index = v.size() - 1;
 
-        if (leftSquare > rightSquare) {
-            result[index--] = leftSquare;
-            left++;
+    // Fill ans[] from the end with largest squares first
+    while (left_ptr <= right_ptr) {
+        if (abs(v[left_ptr]) < abs(v[right_ptr])) {
+            ans[index--] = v[right_ptr] * v[right_ptr];
+            right_ptr--;
         } else {
-            result[index--] = rightSquare;
-            right--;
+            ans[index--] = v[left_ptr] * v[left_ptr];
+            left_ptr++;
         }
     }
 
-    return result;
+    return ans;
 }
 
 int main() {
@@ -35,28 +33,21 @@ int main() {
     cout << "Enter the number of elements: ";
     cin >> n;
 
-    vector<int> a;
+    vector<int> v;
     cout << "Enter " << n << " sorted integers: ";
     for (int i = 0; i < n; i++) {
         int ele;
         cin >> ele;
-        a.push_back(ele);
+        v.push_back(ele);
     }
 
-    // Display original array
-    cout << "Original array: ";
-    for (int num : a) {
-        cout << num << " ";
-    }
-    cout << endl;
+    // Get the sorted squares
+    vector<int> ans = sortedSquaredArray(v);
 
-    // Get sorted squares
-    vector<int> squared = sortedSquares(a);
-
-    // Display result
+    // Print the result
     cout << "Sorted squares: ";
-    for (int num : squared) {
-        cout << num << " ";
+    for (int i = 0; i < v.size(); i++) {
+        cout << ans[i] << " ";
     }
     cout << endl;
 

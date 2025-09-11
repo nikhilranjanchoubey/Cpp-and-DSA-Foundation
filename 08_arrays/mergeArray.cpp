@@ -12,7 +12,7 @@ int main(){
     int n = 8;
     //code to merge two sorted array
 
-    int result(m+n);
+    int result[m+n];
     int i = 0; // will help us to iterate an arr1
     int j = 0; // will help us to iterate an arr2
     int k = 0; // will help us to iterate an result
@@ -47,7 +47,7 @@ int main(){
     //display result
     for(int i = 0; i < (m+n); i++) 
     cout<<result[i]<<" ";
-    
+
     return 0;
 
 }

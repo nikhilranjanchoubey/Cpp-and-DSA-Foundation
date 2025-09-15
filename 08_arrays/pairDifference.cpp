@@ -9,10 +9,10 @@ int main() {
     int x = 10;
     int n = sizeof(arr) / sizeof(arr[0]); // n -->> 5
     int i = 0;
-    int j = n - 1;
+    int j = 1;
     bool found = false;
 
-    while (i < j) {
+    while (i < n and j < n) {
         int diff = abs(arr[i] - arr[j]);
         // What abs does:
         //abs(-10) → 10  
@@ -23,11 +23,11 @@ int main() {
             found = true;
             break;
         } else if (diff < x) {
-            i++; // try increasing the difference
+            j++; // increase difference
         } else {
-            j--; // try decreasing the difference
-        }
+            i++; // decrease difference     
     }
+}
 
     if (found == true)
         cout<<"YES";

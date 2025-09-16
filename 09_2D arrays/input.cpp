@@ -11,7 +11,7 @@ int main(){
 
     int array[n][m];
 
-    cout<<"Enter elements of array: "<<endl;
+    cout<<"Enter elements of the array: "<<endl;
     for (int i=0;i<n;i++){
         for(int j=0;j<m;j++){
             cin>>array[i][j];

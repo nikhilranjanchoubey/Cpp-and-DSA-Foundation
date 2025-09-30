@@ -1,5 +1,6 @@
 #include<iostream>
-#include<bits/stdc++.h>
+#include<bits/stdc++.h> //Includes *almost all* standard C++ libraries in one go
+
 using namespace std;
 
 int main(){
@@ -13,3 +14,4 @@ int main(){
     }
     return 0;
 }
+

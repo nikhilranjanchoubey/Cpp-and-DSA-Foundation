@@ -7,7 +7,7 @@ int main(){
     int n = 9;
 
     for(int i = 0; i < n; i++){
-        cout<<arr[i]<<"\n";
+        cout<<arr[i]<<"\n";   // 0(n)
     }
 
     return 0;

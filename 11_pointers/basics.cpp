@@ -15,10 +15,10 @@ int main(){
     int *ptr = &n; // Can also be written as int* ptr = &n ;; int * ptr = &n
 
     // Print the value of the pointer (i.e., the address it holds)
-    cout << "Pointer: " << ptr << endl; // Output: Pointer: (same address as &n)
+    cout << "Address stored inside ptr: " << ptr << endl; // Output: Pointer: (same address as &n)
 
     // Dereference the pointer to access the value stored at that address
-    cout << "Pointer: " << *ptr << endl; // Output: Pointer: 10
+    cout << "Value present at the address stored in ptr: " << *ptr << endl; // Output: Pointer: 10
 
     return 0; 
 }

@@ -5,8 +5,8 @@ int main(){
 
     int n = 10;
 
-    cout<<n<<endl; // value
-    cout<<&n<<endl; // address
+    cout<<"Value: "<<n<<endl; // value
+    cout<<"Address: "<<&n<<endl; // address
 
     return 0;
 }

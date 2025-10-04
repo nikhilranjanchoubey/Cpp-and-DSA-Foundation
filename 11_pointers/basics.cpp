@@ -20,6 +20,6 @@ int main(){
     // Dereference the pointer to access the value stored at that address
     cout << "Pointer: " << *ptr << endl; // Output: Pointer: 10
 
-    return 0; // Exit the program
+    return 0; 
 }
 

@@ -12,7 +12,7 @@ int main(){
     cout << "Address: " << &n << endl; // Output: Address: (some hexadecimal address)
 
     // Declare a pointer 'ptr' that stores the address of 'n'
-    int *ptr = &n;
+    int *ptr = &n; // Can also be written as int* ptr = &n ;; int * ptr = &n
 
     // Print the value of the pointer (i.e., the address it holds)
     cout << "Pointer: " << ptr << endl; // Output: Pointer: (same address as &n)

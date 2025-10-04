@@ -20,6 +20,24 @@ int main(){
     // Dereference the pointer to access the value stored at that address
     cout << "Value present at the address stored in ptr: " << *ptr << endl; // Output: Pointer: 10
 
+    cout<<"------------------------------------------------------------------------------"<<endl;
+
+    n = 23; // the bucket n is updated the value from 10 to 23
+    // but ptr is still pointing to same bucket
+    // now if we dereference ptr, we will get 23
+
+    cout<<"New updated value of n: "<<n<<endl;
+    cout<<"Ptr still pointing to same memory which has 23 instead of 18: "<<*ptr<<endl;
+
+    // updating n with pointer
+
+    *ptr = 50;
+    cout<<"New value of n: "<<n<<endl;
+    cout<<"New value pointed by ptr: "<<*ptr<<endl;
+
+    int N = *ptr;
+    cout<<N<<endl;
+
     return 0; 
 }
 

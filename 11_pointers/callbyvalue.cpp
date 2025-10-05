@@ -20,6 +20,6 @@ int main(){
 
     // Output will still be 10 20 because the original x and y were not modified
     cout <<"Pass By Value" << endl;
-    cout <<"Value Of X"<< x << endl;
-    cout <<"Value Of Y" << y << endl;
+    cout <<"Value Of X: "<< x << endl;
+    cout <<"Value Of Y: " << y << endl;
 }

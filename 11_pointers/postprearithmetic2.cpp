@@ -3,13 +3,15 @@ using namespace std;
 
 int main(){
 
-    int arr[2] = {5, 4};
+    int arr[2] = {5, 4};        // Declare and initialize an array with two elements
 
-    int *ptr = &arr[0];
+    int *ptr = &arr[0];         // Pointer to the first element of the array
 
-    cout<<(*ptr)++<<endl; // postfix increment
+    // Postfix increment: (*ptr)++ means increment the value at ptr AFTER using it
+    cout << (*ptr)++ << endl;   // Output: 5, then arr[0] becomes 6
 
-    cout<<arr[0]<<" "<<arr[1]<<endl;
-    
+    // Print updated array values
+    cout << arr[0] << " " << arr[1] << endl;  // Output: 6 4
+
     return 0;
 }

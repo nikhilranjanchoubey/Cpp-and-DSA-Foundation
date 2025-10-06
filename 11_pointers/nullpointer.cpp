@@ -11,5 +11,7 @@ int main(){
 
     cout<<ptr<<" "<<p1<<" "<<p2<<" "<<"\n";
 
+    // Pointer is null. Cannot dereference.
+
     return 0;
 }

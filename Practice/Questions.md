@@ -1,4 +1,4 @@
-# 🚀 C++ Revision — Code Questions
+# 🚀 C++ Revision 
 
 This file contains all **code-based revision questions** topic-wise 
 

@@ -1,9 +1,9 @@
- #include<iostream>
+#include<iostream>
 using namespace std;
 
 // Recursive function to calculate nth Fibonacci number
 int fibonacci(int n){
-    
+
     if(n == 0 or n == 1)
         return n; // Base case: 0th Fibonacci number is 0 &  1st Fibonacci number is 1
 

@@ -2,11 +2,11 @@
 using namespace std;
 
 // Recursive function to calculate factorial
-int f(int n){
+int factorial(int n){
     if(n == 1)
         return 1; // Base case: factorial of 1 is 1
 
-    int ans = n * f(n - 1); // Recursive call
+    int ans = n * factorial(n - 1); // Recursive call
     return ans; // Return the computed factorial
 }
 
@@ -15,7 +15,7 @@ int main(){
     cout << "Enter a number: " << endl;
     cin >> n;
 
-    int ans = f(n); // Store the result of factorial in 'ans'
+    int ans = factorial(n); // Store the result of factorial in 'ans'
 
     cout << "Factorial of " << n << " is: " << ans << endl;
 

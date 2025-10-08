@@ -12,7 +12,7 @@ Comprehensive C++ programs demonstrating all types of operators with practical e
 
 ## Overview
 
-Five programs covering arithmetic, relational, logical, bitwise, and special operators in C++.
+Programs covering arithmetic, relational, logical, bitwise, and special operators in C++.
 
 ## Programs
 

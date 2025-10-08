@@ -401,3 +401,7 @@ if ((a > 0) && (b > 0)) { }
 ---
 
 **Learning Path:** oddEven.cpp → score.cpp → agegroup.cpp → divisibleBy3.cpp → divisibleBy3or5.cpp → maximum.cpp → maximum2.cpp → profitLoss.cpp → switch.cpp → calculator.cpp → vowel.cpp → ternaryoperator.cpp
+
+---
+
+**Happy Coding! 🚀**

@@ -530,3 +530,6 @@ for(i = 1 to exp) { pow *= base }
 4. Number patterns (simple → checkerboard → palindrome)
 5. Advanced patterns (pyramid → diamond)
 
+---
+
+**Happy Coding! 🚀**

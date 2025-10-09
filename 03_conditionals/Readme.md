@@ -11,7 +11,7 @@ C++ programs demonstrating conditional statements and decision-making logic.
 
 ## Overview
 
-Thirteen programs covering if-else, nested if-else, switch-case, ternary operators, and logical operators for decision-making.
+Programs covering if-else, nested if-else, switch-case, ternary operators, and logical operators for decision-making.
 
 ## Programs
 

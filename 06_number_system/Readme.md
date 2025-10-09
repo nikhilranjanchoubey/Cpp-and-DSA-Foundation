@@ -12,7 +12,7 @@ C++ programs for converting numbers between different number systems (Binary and
 
 ## Overview
 
-Two programs demonstrating conversions between binary (base-2) and decimal (base-10) number systems.
+Programs demonstrating conversions between binary (base-2) and decimal (base-10) number systems.
 
 ## Programs
 

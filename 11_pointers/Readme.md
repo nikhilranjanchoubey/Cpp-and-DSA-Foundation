@@ -25,7 +25,7 @@ A comprehensive collection of C++ programs demonstrating pointer concepts, opera
 
 ## Overview
 
-This repository contains practical examples covering fundamental to advanced pointer concepts in C++. Each file demonstrates specific pointer operations with detailed comments explaining the behavior and usage.
+This folder contains practical examples covering fundamental to advanced pointer concepts in C++. Each file demonstrates specific pointer operations with detailed comments explaining the behavior and usage.
 
 ## Contents
 

@@ -11,7 +11,7 @@ Essential C++ programs for beginners covering fundamental programming concepts.
 
 ## Overview
 
-Four foundational programs teaching C++ basics: output, input, arithmetic, and variable manipulation.
+Programs teaching C++ basics: output, input, arithmetic, and variable manipulation.
 
 ## Programs
 

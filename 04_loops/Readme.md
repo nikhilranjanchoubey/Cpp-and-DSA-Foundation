@@ -12,7 +12,7 @@ C++ programs demonstrating loop structures and flow control statements.
 
 ## Overview
 
-Five programs covering for loops, while loops, do-while loops, break, and continue statements.
+Programs covering for loops, while loops, do-while loops, break, and continue statements.
 
 ## Programs
 

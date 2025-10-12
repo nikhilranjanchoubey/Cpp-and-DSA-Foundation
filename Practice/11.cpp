@@ -10,9 +10,9 @@ int main(){
     cin>>n;
 
     while(n>0){
-      reverse = reverse*10;
-      reverse = reverse + (n%10);
-      n = n/10;
+      int digit = n % 10;
+      reverse = reverse * 10 + digit;
+        n = n / 10;
    }
    
    cout<<"The reversed number is "<<reverse;

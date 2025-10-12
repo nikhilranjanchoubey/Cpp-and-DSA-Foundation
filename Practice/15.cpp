@@ -2,8 +2,10 @@
 using namespace std;
 
 int main() {
-    int n = 5;
-    
+    int n;
+
+    cout<<"Enter no. of rows: ";
+    cin>>n;    
 
     for (int i = 1; i <= n; i++) {
         // Print leading spaces

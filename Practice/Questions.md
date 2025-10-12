@@ -74,7 +74,7 @@ This file contains all **code-based revision questions** topic-wise
 
 ## 🧮 07_functions
 
-21. Write a function to **calculate factorial (recursion)**.  
+21. Write a function to **calculate factorial**.  
 22. Write a function to **check if a number is prime**.  
 23. Write a function to **check if a number is Armstrong**.  
 24. Write a function to **calculate aⁿ (power)**.  

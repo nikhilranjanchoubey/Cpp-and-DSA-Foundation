@@ -1,0 +1,1 @@
+Base case: if index reaches array size, stop recursion

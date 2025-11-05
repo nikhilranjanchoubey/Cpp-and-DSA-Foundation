@@ -3,7 +3,7 @@ using namespace std;
 
 // Function to find the maximum element in the array recursively
 int findMax(int idx, int n, int arr[]) {
-    // Base case: if we're at the last element, return it
+    // Base case: if array has only one element, return it
     if (idx == n - 1) {
         return arr[idx];
     }

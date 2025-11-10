@@ -1,6 +1,6 @@
 # PATTERN PRINTING
 
-C++ programs demonstrating nested loops through various pattern printing problems and mathematical computations.
+Programs demonstrating nested loops through various pattern printing problems and mathematical computations.
 
 ## Table of Contents
 

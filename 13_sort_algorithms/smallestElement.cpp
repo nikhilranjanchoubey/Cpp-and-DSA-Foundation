@@ -30,7 +30,7 @@ int partition(int arr[], int l, int r) {
     return i;             // Return pivot index
 }
 
-// QuickSelect function to find Kth smallest element
+// QuickSort function to find Kth smallest element
 int kthSmallest(int arr[], int l, int r, int k) {
     if (k > 0 && k <= r - l + 1) {
         int pos = partition(arr, l, r); // Position of pivot

@@ -578,7 +578,4 @@ Follow this structured path to master recursion:
 - Start with iterative solutions, then convert to recursive
 
 ---
-
-**Resources:** [geeksforgeeks.org/recursion](https://geeksforgeeks.org) | [visualgo.net/recursion](https://visualgo.net)
-
 **Happy Coding! 🚀**

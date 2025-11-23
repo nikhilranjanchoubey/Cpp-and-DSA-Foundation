@@ -14,6 +14,8 @@ using namespace std;
 
 // Function to find the first occurrence of target using Binary Search
 int firstOccurrence(vector<int> &input, int target) {
+    /*   Time Complexity: O(\log n)
+         Space Complexity: O(1) */
     int lo = 0, hi = input.size() - 1;
     int ans = -1; // Default: not found
 

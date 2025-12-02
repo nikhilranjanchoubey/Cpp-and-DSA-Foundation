@@ -510,39 +510,6 @@ Need to search?
    └─ Use: 2D Binary Search
 ```
 
-## Time Complexity Analysis
-
-| Operation | Array Size | Time | Comparisons |
-|-----------|------------|------|-------------|
-| **Linear Search** | 1000 | O(n) | ~500 avg |
-| **Binary Search** | 1000 | O(log n) | ~10 |
-| **Linear Search** | 1,000,000 | O(n) | ~500,000 avg |
-| **Binary Search** | 1,000,000 | O(log n) | ~20 |
-
-**Key Insight:** Binary search reduces 1 million comparisons to just 20!
-
-## STL Functions
-
-```cpp
-#include <algorithm>
-
-// Binary search (returns bool)
-bool found = binary_search(arr.begin(), arr.end(), target);
-
-// Lower bound (first >= target)
-auto lb = lower_bound(arr.begin(), arr.end(), target);
-
-// Upper bound (first > target)
-auto ub = upper_bound(arr.begin(), arr.end(), target);
-
-// Count occurrences
-int count = upper_bound(arr.begin(), arr.end(), target) - 
-            lower_bound(arr.begin(), arr.end(), target);
-
-// Equal range (pair of lower and upper bound)
-auto range = equal_range(arr.begin(), arr.end(), target);
-```
-
 ## Complete Learning Path
 
 Follow this structured path to master binary search:

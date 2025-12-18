@@ -4,6 +4,7 @@
    1. Insert at Head
    2. Insert at Tail
    3. Insert at Given Position
+   4. Update value at Given Position
 */
 
 #include <iostream>
@@ -95,6 +96,37 @@ void insertAtPosition(Node *&head, int val, int pos)
     temp->next = new_node;
 }
 
+void updateAtPosition(Node* &head, int k, int val)
+{
+    // Invalid position
+    if (k < 0)
+    {
+        cout << "Invalid position!" << endl;
+        return;
+    }
+
+    Node* temp = head;
+    int curr_pos = 0;
+
+    // Traverse safely to kth position
+    while (temp != NULL && curr_pos < k)
+    {
+        temp = temp->next;
+        curr_pos++;
+    }
+
+    // If position is out of range
+    if (temp == NULL)
+    {
+        cout << "Position out of range!" << endl;
+        return;
+    }
+
+    // Update value at kth position
+    temp->val = val;
+}
+
+
 // Function to display the linked list
 void display(Node *head)
 {
@@ -123,11 +155,11 @@ int main()
     insertAtTail(head, 3);
     display(head);   // 1 -> 2 -> 3 -> NULL
 
-    insertAtTail(head, 4);
-    display(head);   // 1 -> 2 -> 3 -> 4 -> NULL
-
     insertAtPosition(head, 4, 1);
-    display(head);   // 1 -> 4 -> 2 -> 3 -> 4 -> NULL
+    display(head);   // 1 -> 4 -> 2 -> 3 -> NULL
+
+    updateAtPosition(head,2,5);
+    display(head);   // 1 -> 4 -> 5 -> 3 -> NULL
 
     return 0;
 }

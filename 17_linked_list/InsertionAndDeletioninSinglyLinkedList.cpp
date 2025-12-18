@@ -1,10 +1,13 @@
-/* 
-   Program: Insertion in Singly Linked List
+/*
+   Program: Insertion, Update & Deletion in Singly Linked List
    Operations:
    1. Insert at Head
    2. Insert at Tail
    3. Insert at Given Position
    4. Update value at Given Position
+   5. Delete at Head
+   6. Delete at Tail
+   7. Delete at Given Position
 */
 
 #include <iostream>
@@ -14,8 +17,8 @@ using namespace std;
 class Node
 {
 public:
-    int val;        // Data part of node
-    Node *next;     // Pointer to next node
+    int val;    // Data part of node
+    Node *next; // Pointer to next node
 
     // Constructor
     Node(int data)
@@ -96,7 +99,7 @@ void insertAtPosition(Node *&head, int val, int pos)
     temp->next = new_node;
 }
 
-void updateAtPosition(Node* &head, int k, int val)
+void updateAtPosition(Node *&head, int k, int val)
 {
     // Invalid position
     if (k < 0)
@@ -105,7 +108,7 @@ void updateAtPosition(Node* &head, int k, int val)
         return;
     }
 
-    Node* temp = head;
+    Node *temp = head;
     int curr_pos = 0;
 
     // Traverse safely to kth position
@@ -126,6 +129,52 @@ void updateAtPosition(Node* &head, int k, int val)
     temp->val = val;
 }
 
+// Delete node at head
+void deleteAtHead(Node *&head)
+{
+
+    Node *temp = head; // node to be deleted
+    head = head->next; // Move head to next node
+    free(temp);
+}
+
+// Delete node at tail
+void deleteAtTail(Node *&head)
+{
+
+    Node *second_last = head;
+    while (second_last->next->next != NULL)
+    {
+        second_last = second_last->next;
+    }
+    // now second_last points to second last node
+    Node *temp = second_last->next; // node to be deleted
+    second_last->next = NULL;
+    free(temp);
+}
+
+// Delete node at a specific position (0-based index)
+void deleteAtPosition(Node *&head, int pos)
+{
+
+    if (pos == 0)
+    {
+        deleteAtHead(head);
+        return;
+    }
+
+    int curr_pos = 0;
+    Node *prev = head;
+    while (curr_pos != pos - 1)
+    {
+        prev = prev->next;
+        curr_pos++;
+    }
+    // prev is pointing to node at pos-1
+    Node *temp = prev->next; // node to be deleted
+    prev->next = prev->next->next;
+    free(temp);
+}
 
 // Function to display the linked list
 void display(Node *head)
@@ -147,19 +196,28 @@ int main()
     Node *head = NULL; // Initially, linked list is empty
 
     insertAtHead(head, 2);
-    display(head);   // 2 -> NULL
+    display(head); // 2 -> NULL
 
     insertAtHead(head, 1);
-    display(head);   // 1 -> 2 -> NULL
+    display(head); // 1 -> 2 -> NULL
 
     insertAtTail(head, 3);
-    display(head);   // 1 -> 2 -> 3 -> NULL
+    display(head); // 1 -> 2 -> 3 -> NULL
 
     insertAtPosition(head, 4, 1);
-    display(head);   // 1 -> 4 -> 2 -> 3 -> NULL
+    display(head); // 1 -> 4 -> 2 -> 3 -> NULL
 
-    updateAtPosition(head,2,5);
-    display(head);   // 1 -> 4 -> 5 -> 3 -> NULL
+    updateAtPosition(head, 2, 5);
+    display(head); // 1 -> 4 -> 5 -> 3 -> NULL
+
+    deleteAtHead(head);
+    display(head); // 4 -> 5 -> 3 -> NULL
+
+    deleteAtTail(head);
+    display(head); // 4 -> 5 -> NULL
+
+    deleteAtPosition(head, 1);
+    display(head); // 4 -> NULL
 
     return 0;
 }

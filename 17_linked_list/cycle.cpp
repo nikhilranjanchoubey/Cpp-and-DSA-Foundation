@@ -131,8 +131,6 @@ int main()
     cout << "Final Linked List (After Cycle Removal):" << endl;
 
     ll.display();
-
-    ;
-
+    
     return 0;
 }

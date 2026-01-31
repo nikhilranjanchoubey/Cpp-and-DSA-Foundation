@@ -76,6 +76,91 @@ public:
         tail = new_node;
         return;
     }
+
+    void insertAtPosition(int val, int k)
+    {
+
+        // assuming k is less or equal to length of doubly linked list
+        Node *temp = head;
+        int count = 1;
+        while (count < (k - 1))
+        {
+            temp = temp->next;
+            count++;
+        }
+
+        // temp will be pointing to the code at (k-1)th position
+        Node *new_node = new Node(val);
+        new_node->next = temp->next;
+        temp->next = new_node;
+
+        new_node->prev = temp;
+        new_node->next->prev = new_node;
+        return;
+    }
+
+    void deleteAtStart()
+    {
+
+        if (head == NULL)
+        {
+            return;
+        }
+
+        Node *temp = head;
+        head = head->next;
+        if (head == NULL) // if doubly linked list had only 1 node
+        {
+            tail = NULL;
+        }
+        else
+        {
+            head->prev = NULL;
+        }
+        free(temp);
+        return;
+    }
+    void deleteAtEnd()
+    {
+
+        if (head == NULL)
+        {
+            return;
+        }
+
+        Node *temp = tail;
+        tail = tail->prev;
+        if (tail == NULL)
+        {
+            head = NULL;
+        }
+        else
+        {
+            tail->next = NULL;
+        }
+
+        free(temp);
+        return;
+    }
+
+    void deleteAtPosition(int k)
+    {
+
+        // assuming k is less than or equal to length of doubly linked list
+        Node *temp = head;
+        int counter = 1;
+        while (counter < k)
+        {
+            temp = temp->next;
+            counter++;
+        }
+
+        // now temp is pointing to node at kth position
+        temp->prev->next = temp->next;
+        temp->next->prev = temp->prev;
+
+        free(temp);
+    }
 };
 
 int main()
@@ -93,6 +178,18 @@ int main()
     dll.insertAtEnd(2);
     dll.display();
     dll.insertAtEnd(3);
+    dll.display();
+
+    dll.insertAtPosition(4, 3);
+    dll.display();
+
+    // dll.deleteAtStart();
+    // dll.display();
+
+    // dll.deleteAtEnd();
+    // dll.display();
+
+    dll.deleteAtPosition(3);
     dll.display();
 
     return 0;
